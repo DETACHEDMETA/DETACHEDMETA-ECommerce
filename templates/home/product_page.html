@@ -53,19 +53,19 @@
     <hr class="divider-w">
     <section class="module-small">
       <div class="container">
-        {% for product in product %}
+     
         <div class="row multi-columns-row">
-         
+          {% for product in product %}   
           <div class="col-sm-6 col-md-3 col-lg-3">
 
          
             <div class="shop-item">
               {% if product.image %}
-                <div class="shop-item-image"><img src="{{product.image.url}}"  width="400"  height="500" alt="Accessories Pack"/>
+                <div class="shop-item-image"><img src="{{product.image.url}}" alt="Accessories Pack"/>
                   {% endif %}
                   <div class="shop-item-detail"><a href="/detail/{{product.id}}" class="btn btn-round btn-b"><span class="icon-search"> &nbsp; More Details</span></a></div>
                 </div>
-                <h4 class="shop-item-title font-alt"><a href="shop_single_product.html"></a>Accessories Pack</a></h4>£9.00
+                <h4 class="shop-item-title font-alt"><a href="shop_single_product.html"></a>Accessories Pack</a></h4>₹{{product.price}}
               </div>
             </div>
             {% endfor %}

@@ -13,7 +13,7 @@ def home_view(request) :
     
     context = {
         'category' : category ,
-        'top_product' : top ,
+        'top_product' : top[::-1] ,
     }
     return render(request, 'home/home.html',context)
 

@@ -4,6 +4,8 @@
 
 
 
+
+
 <div class="main">
     <section class="module">
       <div class="container">
@@ -11,11 +13,11 @@
         <div class="row">
 
        
-          <div class="col-sm-6 mb-sm-40"><a class="gallery" href="/static/images/shop/product-7.jpg"><img src="{{product.image.url}}" alt="Single Product Image"/></a>
+          <div class="col-sm-6 mb-sm-40"><a class="gallery" href="{{product.image.url}}"><img src="{{product.image.url}}" alt="Single Product Image"/></a>
             <ul class="product-gallery">
-              <li><a class="gallery" href="/static/images/shop/product-8.jpg"></a><img src="/static/images/shop/product-8.jpg" alt="Single Product"/></li>
-              <li><a class="gallery" href="/static/images/shop/product-9.jpg"></a><img src="/static/images/shop/product-9.jpg" alt="Single Product"/></li>
-              <li><a class="gallery" href="/static/images/shop/product-10.jpg"></a><img src="/static/images/shop/product-10.jpg" alt="Single Product"/></li>
+              <li><a class="gallery" href="/static/images/shop/product-8.jpg" ></a><img class="fit-picture" src="/static/images/shop/product-8.jpg" alt="Single Product" width="665" height="750" /></li>
+              <li><a class="gallery" href="/static/images/shop/product-9.jpg"></a><img class="fit-picture" src="/static/images/shop/product-9.jpg" alt="Single Product"/></li>
+              <li><a class="gallery" href="/static/images/shop/product-10.jpg"></a><img class="fit-picture" src="/static/images/shop/product-10.jpg" alt="Single Product"/></li>
             </ul>
           </div>
       
@@ -53,7 +55,10 @@
             <div class="col-sm-4 mb-sm-20">
               <!-- <input class="form-control input-lg" type="number" name="" value="1" max="40" min="1" required="required"/> -->
             </div>
-            <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round btn-b" href="#">Buy Now</a></div>
+            {% if product.model %}
+            <div class="col-sm-8"><a class="btn btn-lg btn-block btn-round btn-b" href="{{product.model.url}}" download>Download Now</a></div>
+            <!-- <a href="/images/myw3schoolsimage.jpg" download> -->
+              {% endif %}
           </div>
 
             <div class="row mb-20">
@@ -354,6 +359,12 @@
 </main>
 
 
+<!-- <style>
+  img {
+     max-width: 665px;
+     height: 750px;
+       }
+ </style> -->
 {% endblock content %}
 
 
