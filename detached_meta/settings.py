@@ -122,6 +122,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# python anywhere
+STATIC_ROOT = '/home/adityaadi/DETACHEDMETA-ECommerce/static'
+# python anywhere
+
 MEDIA_URL = 'static/images/'
 if DEBUG:
     MEDIA_URL = 'images/'
@@ -136,6 +141,3 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
-# python anywhere
-STATIC_ROOT = '/home/adityaadi/DETACHEDMETA-ECommerce/static'
-# python anywhere
