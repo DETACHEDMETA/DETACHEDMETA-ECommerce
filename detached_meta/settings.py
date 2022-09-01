@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-^f634%$6!$6*)i)0htf54s3a+lj!k=1@8s*h)ar8qukdv+e9)+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['adityaadi.pythonanywhere.com']
+ALLOWED_HOSTS = ['adityaadi.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -123,9 +123,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# python anywhere
-STATIC_ROOT = '/home/adityaadi/DETACHEDMETA-ECommerce/static'
-# python anywhere
+
 
 MEDIA_URL = 'static/images/'
 if DEBUG:
@@ -141,3 +139,7 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+# python anywhere
+if not DEBUG:
+    STATIC_ROOT = '/home/adityaadi/DETACHEDMETA-ECommerce/static'
+# python anywhere
